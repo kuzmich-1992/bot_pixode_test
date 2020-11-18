@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :athlets
+  resources :athlets do
+    collection do
+      get :send_message
+    end
+  end
   root 'athlets#index'
 end

@@ -8,13 +8,12 @@ ANSWER = Athlet.maximum(:result)
     @athlets = Athlet.all
   end
   
-  # Telegram::Bot::Client.run(TOKEN) do |bot|	
-  #   bot.listen do |message|
-  #     case message.text
-  #       when '/start'
-	 #    bot.api.send_message(chat_id: message.chat.id, text: "ok")
-  #     end
-  #   end
-  # end
+  def send_message
+    Telegram::Bot::Client.run(TOKEN) do |bot|
+      bot.listen do |message|
+        bot.api.send_message(chat_id: message.chat.id, text: "best result is - #{ANSWER}")
+      end
+    end
+  end
   
 end
