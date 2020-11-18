@@ -2,3 +2,20 @@
 <div class="athlets" id='athlets'>
     <%= render @athlets %>
 </div>
+
+<p></p>
+
+<input class="btn btn-primary" type="button" value="Input">
+
+<div class='best'>
+<div class="card border-dark mb-3">
+  <div class="card">
+    <div class="card-body" style="background-color: #d1b681; width: 300px; height: 60px;">
+      <div class="col-md">
+      	<p>Athlets best result</p>
+        <%= Athlet.maximum(:result) %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
