@@ -43,6 +43,7 @@ gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
 gem 'telegram-bot-ruby'
 gem 'rubocop'
 gem 'sass-rails'
+gem 'bootstrap-sass'
 gem 'rest-client'
 gem 'pry'
 

@@ -12,5 +12,6 @@ TELEGRAM_CHAT_ID = '-440848523'
     Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
       bot.api.send_message(chat_id: "#{TELEGRAM_CHAT_ID}", text: "best result is - #{ANSWER}")
     end
+    redirect_to root_path
   end
 end
