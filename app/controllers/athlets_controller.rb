@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class AthletsController < ActionController::Base
-  respond_to :html, :json, :xml
+  respond_to :html, :json, :xml, :js
   require 'rest-client'
   require 'telegram/bot'
+  layout 'application'
   ANSWER = Athlet.maximum(:result)
   TELEGRAM_BOT_TOKEN = '1288229656:AAHh9REQgomtG7Q1YFfK3AeTgn2lvxsr71g'
   TELEGRAM_CHAT_ID = '-440848523'

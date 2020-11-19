@@ -42,6 +42,7 @@ gem 'bootstrap-sass'
 gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
 gem 'devise'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'pry'
 gem 'rest-client'
 gem 'rubocop'
@@ -49,6 +50,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'telegram-bot-ruby'
 gem 'simple_form'
+gem 'autoprefixer-rails'
+gem 'mini_racer', platforms: :ruby
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
