@@ -48,6 +48,7 @@ gem 'rubocop'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'telegram-bot-ruby'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

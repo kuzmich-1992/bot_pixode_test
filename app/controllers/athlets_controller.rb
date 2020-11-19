@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class AthletsController < ActionController::Base
+  respond_to :html, :json, :xml
   require 'rest-client'
   require 'telegram/bot'
   ANSWER = Athlet.maximum(:result)
@@ -14,6 +15,9 @@ class AthletsController < ActionController::Base
     Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
       bot.api.send_message(chat_id: TELEGRAM_CHAT_ID.to_s, text: "best result is - #{ANSWER}")
     end
-    redirect_to root_path
+    respond_to do |format|
+      format.json { head :no_content }
+      format.html { redirect_to root_path }
+    end
   end
 end
