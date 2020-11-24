@@ -23,6 +23,5 @@ class AthletsController < ActionController::Base
       format.json { head :no_content }
       format.html { redirect_to root_path }
     end
-    print @@step
   end
 end
